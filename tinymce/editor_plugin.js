@@ -17,14 +17,18 @@
         init : function(ed, url) {
             // Register the command so that it can be invoked by using tinyMCE.activeEditor.execCommand('mceMoodleNolink');
             ed.addCommand('mceFixedHighlight1', function() {
-               ed.selection.setContent('<span style="background-color:green">' + ed.selection.getContent() + '</span>');
+               ed.selection.setContent('<span style="background-color:#0F0">' + ed.selection.getContent() + '</span>');
             });
             ed.addCommand('mceFixedHighlight2', function() {
                ed.selection.setContent('<span style="background-color:yellow">' + ed.selection.getContent() + '</span>');
             });
             ed.addCommand('mceFixedHighlight3', function() {
+               ed.selection.setContent('<span style="background-color:#0FF">' + ed.selection.getContent() + '</span>');
+            });
+            ed.addCommand('mceFixedHighlight4', function() {
                ed.selection.setContent('<span style="background-color:red">' + ed.selection.getContent() + '</span>');
             });
+
 
             // Register moodlenolink button
             ed.addButton('fixedhighlight1', {
@@ -40,6 +44,11 @@
             ed.addButton('fixedhighlight3', {
                 title : 'fixedhighlight3.desc',
                 cmd : 'mceFixedHighlight3',
+                image : url + '/img/highlight_blue.png'
+            });
+            ed.addButton('fixedhighlight4', {
+                title : 'fixedhighlight4.desc',
+                cmd : 'mceFixedHighlight4',
                 image : url + '/img/highlight_red.png'
             });
 
@@ -57,7 +66,7 @@
                 author : 'Celso Gonzalez',
                 authorurl : 'http://moodle.com/hq',
                 infourl : 'http://docs.moodle.org/en/TinyMCE',
-                version : "1.0"
+                version : "1.1"
             };
         }
     });

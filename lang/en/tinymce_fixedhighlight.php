@@ -28,3 +28,4 @@ $string['pluginname'] = 'EOIVH Fixed Highlights';
 $string['fixedhighlight1:desc'] = 'Fixed Highlights 1';
 $string['fixedhighlight2:desc'] = 'Fixed Highlights 2';
 $string['fixedhighlight3:desc'] = 'Fixed Highlights 3';
+$string['fixedhighlight4:desc'] = 'Fixed Highlights 4';

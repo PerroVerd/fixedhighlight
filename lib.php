@@ -25,7 +25,7 @@ defined('MOODLE_INTERNAL') || die();
  */
 class tinymce_fixedhighlight extends editor_tinymce_plugin {
     /** @var array list of buttons defined by this plugin */
-    protected $buttons = array('fixedhighlight1', 'fixedhighlight2', 'fixedhighlight3');
+    protected $buttons = array('fixedhighlight1', 'fixedhighlight2', 'fixedhighlight3', 'fixedhighlight4');
 
     protected function update_init_params(array &$params, context $context,
             array $options = null) {
@@ -35,11 +35,13 @@ class tinymce_fixedhighlight extends editor_tinymce_plugin {
             $this->add_button_after($params, $row, 'fixedhighlight1', 'unlink');
             $this->add_button_after($params, $row, 'fixedhighlight2', 'unlink');
             $this->add_button_after($params, $row, 'fixedhighlight3', 'unlink');
+            $this->add_button_after($params, $row, 'fixedhighlight4', 'unlink');
         } else {
             // Add this button in the end of the first row (by default 'unlink' button should be in the first row).
             $this->add_button_after($params, 3, 'fixedhighlight1');
             $this->add_button_after($params, 3, 'fixedhighlight2');
             $this->add_button_after($params, 3, 'fixedhighlight3');
+            $this->add_button_after($params, 3, 'fixedhighlight4');
         }
 
         // Add JS file, which uses default name.
